@@ -1,31 +1,14 @@
 import Link from 'next/link'
-// import { makeStyles } from '@material-ui/core/styles';
-// import makeStyles from '@material-ui/styles/makeStyles'
-import Card from '@material-ui/core/Card';
-
 import CardActionArea from '@material-ui/core/CardActionArea';
-
-// import CardContent from '@material-ui/core/CardContent';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import Typography from '@material-ui/core/Typography';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import { Grid } from '@material-ui/core';
-
-
-
-// let widtH = window.innerWidth
+import { DesktopCard, MobileCard } from '../styles/customs/wrappers';
+import { BanglaTypo } from '../styles/customs/typo';
 
 const PostCard = ({ data }: any) => {
 
-    // const useStyles: Function = makeStyles({
-    //     root: {
-    //         maxWidth: 345,
-    //         margin: '15px auto',
-    //         boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.3)'
-    //     },
-    // })
-
     const { _id, image, title, exerpt } = data
-    // const classes = useStyles();
     const s = {
         card: {
             display: 'flex',
@@ -36,7 +19,7 @@ const PostCard = ({ data }: any) => {
             borderRadius: '10px'
         },
         info: {
-            padding: '10px',
+            padding: '0 10px',
             fontFamily: 'kalpurush'
         },
         p: {
@@ -46,7 +29,7 @@ const PostCard = ({ data }: any) => {
     return (
         <Grid item md={4} sm={6} xs={12}>
             <div style={{ margin: '15px' }}>
-                {/* {widtH >= 600 && <Card className={classes.root}>
+                <DesktopCard>
                     <Link href={`/post/${_id}`} passHref >
                         <CardActionArea>
                             <CardMedia
@@ -57,17 +40,17 @@ const PostCard = ({ data }: any) => {
                                 title={title}
                             />
                             <CardContent>
-                                <Typography className="banglaFont" gutterBottom variant="h5" component="h2">
+                                <BanglaTypo gutterBottom variant="h5">
                                     {title}
-                                </Typography>
-                                <Typography className="banglaFont" variant="body2" color="textSecondary" component="p">
+                                </BanglaTypo>
+                                <BanglaTypo variant="body2" color="textSecondary">
                                     {exerpt}
-                                </Typography>
+                                </BanglaTypo>
                             </CardContent>
                         </CardActionArea>
                     </Link>
-                </Card>} */}
-                <Card>
+                </DesktopCard>
+                <MobileCard>
                     <Link href={`/post/${_id}`} passHref>
                         <CardActionArea>
                             <div style={s.card}>
@@ -77,8 +60,9 @@ const PostCard = ({ data }: any) => {
                                     <p style={s.p}>{exerpt}</p>
                                 </div>
                             </div>
-                        </CardActionArea></Link>
-                </Card>
+                        </CardActionArea>
+                    </Link>
+                </MobileCard>
             </div>
         </Grid>
     )
