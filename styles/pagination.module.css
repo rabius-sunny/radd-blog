@@ -1,0 +1,47 @@
+.disabled {
+    pointer-events: none;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.493) !important;
+  }
+  .active {
+    background: #1976d2;
+    color: #fff;
+  }
+  .active:focus {
+    outline: 0;
+  }
+  .myNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    width: 100%;
+  }
+  .myNav .pageCount {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+  }
+  .pagination {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .pageItem>button {
+    border: 0;
+    background-color: #dc004e;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 3px;
+    margin: 0 10px;
+    font-weight: 600;
+  }
+  .pageCount>button {
+    border: 0;
+    padding: 10px 14px;
+    margin: 0 6px;
+    border-radius: 25px;
+  }
+  .pageItem>button:focus {
+    outline: 0;
+  }
