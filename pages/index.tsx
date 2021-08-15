@@ -14,7 +14,8 @@ export default function Index({ posts }: any) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
+  
   const res = await fetch('https://mbook-backend.herokuapp.com/sharedposts')
   const data = await res.json()
   let posts: any[] = []
