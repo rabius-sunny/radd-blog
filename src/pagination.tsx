@@ -29,7 +29,7 @@ const PostPagination = ({ data, pageLimit, dataLimit }: any) => {
     }
     const getPaginationGroup = () => {
         let start = Math.floor((currentPage - 1) / pageLimit) * pageLimit
-        return new Array(pageLimit).fill().map((_int, index) => start + index + 1)
+        return new Array(pageLimit).fill(0).map((_int, index) => start + index + 1)
     }
 
     return (
