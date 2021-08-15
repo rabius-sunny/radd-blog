@@ -9,6 +9,7 @@ const DesktopCard = styled(Card)({
         display: 'none'
     },
     maxWidth: 345,
+    height: '360px',
     margin: '15px auto',
     boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.3)'
 })

@@ -23,7 +23,8 @@ const PostCard = ({ data }: any) => {
             fontFamily: 'kalpurush'
         },
         p: {
-            fontSize: '12px'
+            fontSize: '12px',
+            margin: '0'
         }
     }
     return (
@@ -57,7 +58,7 @@ const PostCard = ({ data }: any) => {
                             <div style={s.card}>
                                 <img width="50%" src={image} alt="postImg" />
                                 <div className="card" style={s.info}>
-                                    <h5>{title}</h5>
+                                    <h5 style={{margin: '10px 0 0 0'}}>{title}</h5>
                                     <p style={s.p}>{exerpt}</p>
                                 </div>
                             </div>

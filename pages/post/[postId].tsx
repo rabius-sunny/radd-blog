@@ -40,7 +40,7 @@ const DetailPost = ({ posts }: any) => {
                     </div>
 
                     <Heading>
-                        <div style={{ padding: '0 15px' }}><h3 style={{ fontFamily: 'kalpurush' }}>{title}</h3></div>
+                        <Container><h3 style={{ fontFamily: 'kalpurush' }}>{title}</h3></Container>
                     </Heading>
 
                     <div style={{ marginBottom: '20px', marginLeft: '10px' }} className="fontSize">
