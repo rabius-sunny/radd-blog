@@ -2,18 +2,20 @@ import { useRouter } from "next/router"
 
 const DetailPost = ({ posts }: any) => {
 
-    const { title } = posts[0]
     const router = useRouter()
-
+    
     if (router.isFallback) {
         return <h1>Loading</h1>
+    } else {
+        console.log(posts[0])
+        const { title, post } = posts[0]
+        return (
+            <div>
+                <h1>{title}</h1>
+                <p>{post}</p>
+            </div>
+        )
     }
-
-    return (
-        <div>
-            <h1>{title}</h1>
-        </div>
-    )
 }
 
 export default DetailPost
@@ -32,7 +34,7 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
