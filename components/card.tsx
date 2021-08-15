@@ -50,6 +50,7 @@ const PostCard = ({ data }: any) => {
                         </CardActionArea>
                     </Link>
                 </DesktopCard>
+                
                 <MobileCard>
                     <Link href={`/post/${_id}`} passHref>
                         <CardActionArea>

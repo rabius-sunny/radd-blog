@@ -20,6 +20,12 @@ export default function MyApp(props: MyAppProps) {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>Blog of Radd</title>
+        <meta property="og:title" content="Blog of Radd" />
+        <meta property="og:description" content="This is the blog of refuting falsehood" />
+        <meta property="og:url" content="radd-blog.vercel.app" />
+        <meta property="twitter:title" content="Blog of Radd" />
+        <meta property="twitter:description" content="This is the blog of refuting falsehood" />
+        <meta property="twitter:card" content="radd-blog.vercel.app" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>

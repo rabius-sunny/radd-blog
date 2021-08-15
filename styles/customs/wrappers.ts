@@ -18,6 +18,12 @@ const MobileCard = styled(Card)({
     },
     boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.3)'
 })
+const Heading = styled('div')({
+    backgroundColor: '#3f51b53b',
+    color: '#3f51b5',
+    padding: '10px 0',
+    margin: '20px 0'
+})
 
 
-export { RootContainer, DesktopCard, MobileCard }
+export { RootContainer, DesktopCard, MobileCard, Heading }
